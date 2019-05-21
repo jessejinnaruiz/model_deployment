@@ -1,0 +1,20 @@
+<html>
+<head>
+    <title >Spam Detector for Text</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body class='p-5 text-center pb-4'>
+    <h1 class='my-4'>Please enter some text. This will be used to detect for spam.</h1>
+        <p>This model was created using text messages from the following Kaggle competition data: <a href='https://www.kaggle.com/ishansoni/sms-spam-collection-dataset'>Spam Data</a></p>
+</body>
+
+<form action="/make-prediction" method="POST">
+    <div class="form-group">
+    <label for="text">What do you want to analyze?</label>
+    <input id="text" type="text" name="text">
+    <br />
+</div>
+    <input type="submit">
+</form>
+</html>

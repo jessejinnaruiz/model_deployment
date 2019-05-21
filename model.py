@@ -1,4 +1,9 @@
 import pandas as pd
+import numpy as np
+from numpy import random
+from flask import Flask
+from flask import render_template
+from flask import request
 
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
@@ -19,3 +24,4 @@ lm = LogisticRegression(solver='saga').fit(X_train, y_train)
 
 def predict(msg):
     return lm.predict(tfidf.transform([msg]))[0]
+
